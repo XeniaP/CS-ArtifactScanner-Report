@@ -1,0 +1,5 @@
+*.exe
+THIRD-PARTY-LICENSES/*
+*.xlsx
+*.pdf
+*.md

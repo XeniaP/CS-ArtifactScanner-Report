@@ -1,0 +1,2268 @@
+{
+  "totalVulnCount": 74,
+  "criticalCount": 0,
+  "highCount": 3,
+  "mediumCount": 25,
+  "lowCount": 36,
+  "negligibleCount": 10,
+  "unknownCount": 0,
+  "findings": {
+    "High": [
+      {
+        "name": "libc-bin",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4911",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4911",
+        "severity": "High",
+        "fix": "2.35-0ubuntu3.4",
+        "locations": [
+          "/usr/share/doc/libc-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4911",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4911",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc6",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4911",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4911",
+        "severity": "High",
+        "fix": "2.35-0ubuntu3.4",
+        "locations": [
+          "/usr/share/doc/libc6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4911",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4911",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcurl4",
+        "type": "deb",
+        "version": "7.81.0-1ubuntu1.10",
+        "id": "CVE-2023-38545",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-38545",
+        "severity": "High",
+        "fix": "7.81.0-1ubuntu1.14",
+        "locations": [
+          "/usr/share/doc/libcurl4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-38545",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-38545",
+            "severity": "Critical",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Low": [
+      {
+        "name": "bash",
+        "type": "deb",
+        "version": "5.1-6ubuntu1",
+        "id": "CVE-2022-3715",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-3715",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/bash/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-3715",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-3715",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "coreutils",
+        "type": "deb",
+        "version": "8.32-4.1ubuntu1",
+        "id": "CVE-2016-2781",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-2781",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/coreutils/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2016-2781",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-2781",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              },
+              {
+                "cvssVersion": "3.0",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gcc-12-base",
+        "type": "deb",
+        "version": "12.1.0-2ubuntu1~22.04",
+        "id": "CVE-2022-27943",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-27943",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/gcc-12-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-27943",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-27943",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gpgv",
+        "type": "deb",
+        "version": "2.2.27-3ubuntu2.1",
+        "id": "CVE-2022-3219",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-3219",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/gpgv/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-3219",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-3219",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc-bin",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4813",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4813",
+        "severity": "Low",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4813",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4813",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc-bin",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4806",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4806",
+        "severity": "Low",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4806",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4806",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc6",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4813",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4813",
+        "severity": "Low",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4813",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4813",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc6",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-4806",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4806",
+        "severity": "Low",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4806",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4806",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcap2",
+        "type": "deb",
+        "version": "1:2.44-1build3",
+        "id": "CVE-2023-2602",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2602",
+        "severity": "Low",
+        "fix": "1:2.44-1ubuntu0.22.04.1",
+        "locations": [
+          "/usr/share/doc/libcap2/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2602",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2602",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcurl4",
+        "type": "deb",
+        "version": "7.81.0-1ubuntu1.10",
+        "id": "CVE-2023-38546",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-38546",
+        "severity": "Low",
+        "fix": "7.81.0-1ubuntu1.14",
+        "locations": [
+          "/usr/share/doc/libcurl4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-38546",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-38546",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcurl4",
+        "type": "deb",
+        "version": "7.81.0-1ubuntu1.10",
+        "id": "CVE-2023-28322",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-28322",
+        "severity": "Low",
+        "fix": "7.81.0-1ubuntu1.11",
+        "locations": [
+          "/usr/share/doc/libcurl4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-28322",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-28322",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcurl4",
+        "type": "deb",
+        "version": "7.81.0-1ubuntu1.10",
+        "id": "CVE-2023-28321",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-28321",
+        "severity": "Low",
+        "fix": "7.81.0-1ubuntu1.11",
+        "locations": [
+          "/usr/share/doc/libcurl4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-28321",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-28321",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libgcc-s1",
+        "type": "deb",
+        "version": "12.1.0-2ubuntu1~22.04",
+        "id": "CVE-2022-27943",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-27943",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/gcc-12-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-27943",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-27943",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libldap-2.5-0",
+        "type": "deb",
+        "version": "2.5.14+dfsg-0ubuntu0.22.04.1",
+        "id": "CVE-2023-2953",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2953",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libldap-2.5-0/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2953",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2953",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libldap-common",
+        "type": "deb",
+        "version": "2.5.14+dfsg-0ubuntu0.22.04.1",
+        "id": "CVE-2023-2953",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2953",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libldap-common/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2953",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2953",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libprocps8",
+        "type": "deb",
+        "version": "2:3.3.17-6ubuntu2",
+        "id": "CVE-2023-4016",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4016",
+        "severity": "Low",
+        "fix": "2:3.3.17-6ubuntu2.1",
+        "locations": [
+          "/usr/share/doc/libprocps8/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4016",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4016",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-3817",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-3817",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-3817",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-3817",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-3446",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-3446",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-3446",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-3446",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-2975",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2975",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2975",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2975",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-1255",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-1255",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.10",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-1255",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1255",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0465",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0465",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0465",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0464",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0464",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0464",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2022-3996",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-3996",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-3996",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-3996",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libstdc++6",
+        "type": "deb",
+        "version": "12.1.0-2ubuntu1~22.04",
+        "id": "CVE-2022-27943",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-27943",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/gcc-12-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-27943",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-27943",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libzstd1",
+        "type": "deb",
+        "version": "1.4.8+dfsg-3build1",
+        "id": "CVE-2022-4899",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-4899",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libzstd1/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-4899",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-4899",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "login",
+        "type": "deb",
+        "version": "1:4.8.1-2ubuntu2.1",
+        "id": "CVE-2023-29383",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29383",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/login/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29383",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-3817",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-3817",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-3817",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-3817",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-3446",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-3446",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-3446",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-3446",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-2975",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2975",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2975",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2975",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-1255",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-1255",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.10",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-1255",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1255",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0465",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0465",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0465",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0464",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0464",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0464",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2022-3996",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-3996",
+        "severity": "Low",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-3996",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-3996",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "passwd",
+        "type": "deb",
+        "version": "1:4.8.1-2ubuntu2.1",
+        "id": "CVE-2023-29383",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29383",
+        "severity": "Low",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/passwd/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29383",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "severity": "Low",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "perl-base",
+        "type": "deb",
+        "version": "5.34.0-3ubuntu1.1",
+        "id": "CVE-2022-48522",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-48522",
+        "severity": "Low",
+        "fix": "5.34.0-3ubuntu1.3",
+        "locations": [
+          "/usr/share/doc/perl-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-48522",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-48522",
+            "severity": "Critical",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "procps",
+        "type": "deb",
+        "version": "2:3.3.17-6ubuntu2",
+        "id": "CVE-2023-4016",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-4016",
+        "severity": "Low",
+        "fix": "2:3.3.17-6ubuntu2.1",
+        "locations": [
+          "/usr/share/doc/procps/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-4016",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-4016",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "L"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "name": "libc-bin",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-5156",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-5156",
+        "severity": "Medium",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-5156",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5156",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc6",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2023-5156",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-5156",
+        "severity": "Medium",
+        "fix": "2.35-0ubuntu3.5",
+        "locations": [
+          "/usr/share/doc/libc6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-5156",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5156",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcap2",
+        "type": "deb",
+        "version": "1:2.44-1build3",
+        "id": "CVE-2023-2603",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2603",
+        "severity": "Medium",
+        "fix": "1:2.44-1ubuntu0.22.04.1",
+        "locations": [
+          "/usr/share/doc/libcap2/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2603",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2603",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libcurl4",
+        "type": "deb",
+        "version": "7.81.0-1ubuntu1.10",
+        "id": "CVE-2023-46218",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-46218",
+        "severity": "Medium",
+        "fix": "7.81.0-1ubuntu1.15",
+        "locations": [
+          "/usr/share/doc/libcurl4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-46218",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-46218",
+            "severity": "",
+            "cvssSummaries": []
+          }
+        ]
+      },
+      {
+        "name": "libgnutls30",
+        "type": "deb",
+        "version": "3.7.3-4ubuntu1.2",
+        "id": "CVE-2023-5981",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-5981",
+        "severity": "Medium",
+        "fix": "3.7.3-4ubuntu1.3",
+        "locations": [
+          "/usr/share/doc/libgnutls30/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-5981",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5981",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "N"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libgssapi-krb5-2",
+        "type": "deb",
+        "version": "1.19.2-2ubuntu0.1",
+        "id": "CVE-2023-36054",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-36054",
+        "severity": "Medium",
+        "fix": "1.19.2-2ubuntu0.3",
+        "locations": [
+          "/usr/share/doc/libgssapi-krb5-2/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-36054",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-36054",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libk5crypto3",
+        "type": "deb",
+        "version": "1.19.2-2ubuntu0.1",
+        "id": "CVE-2023-36054",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-36054",
+        "severity": "Medium",
+        "fix": "1.19.2-2ubuntu0.3",
+        "locations": [
+          "/usr/share/doc/libk5crypto3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-36054",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-36054",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libkrb5-3",
+        "type": "deb",
+        "version": "1.19.2-2ubuntu0.1",
+        "id": "CVE-2023-36054",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-36054",
+        "severity": "Medium",
+        "fix": "1.19.2-2ubuntu0.3",
+        "locations": [
+          "/usr/share/doc/libkrb5-3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-36054",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-36054",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libkrb5support0",
+        "type": "deb",
+        "version": "1.19.2-2ubuntu0.1",
+        "id": "CVE-2023-36054",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-36054",
+        "severity": "Medium",
+        "fix": "1.19.2-2ubuntu0.3",
+        "locations": [
+          "/usr/share/doc/libkrb5support0/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-36054",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-36054",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "liblzma5",
+        "type": "deb",
+        "version": "5.2.5-2ubuntu1",
+        "id": "CVE-2020-22916",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-22916",
+        "severity": "Medium",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/liblzma5/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2020-22916",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2020-22916",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libncurses6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2023-29491",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29491",
+        "severity": "Medium",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29491",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29491",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libncursesw6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2023-29491",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29491",
+        "severity": "Medium",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29491",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29491",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libnghttp2-14",
+        "type": "deb",
+        "version": "1.43.0-1build3",
+        "id": "CVE-2023-44487",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-44487",
+        "severity": "Medium",
+        "fix": "1.43.0-1ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libnghttp2-14/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-44487",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-44487",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssh-4",
+        "type": "deb",
+        "version": "0.9.6-2build1",
+        "id": "CVE-2023-2283",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2283",
+        "severity": "Medium",
+        "fix": "0.9.6-2ubuntu0.22.04.1",
+        "locations": [
+          "/usr/share/doc/libssh-4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2283",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2283",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssh-4",
+        "type": "deb",
+        "version": "0.9.6-2build1",
+        "id": "CVE-2023-1667",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-1667",
+        "severity": "Medium",
+        "fix": "0.9.6-2ubuntu0.22.04.1",
+        "locations": [
+          "/usr/share/doc/libssh-4/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-1667",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-1667",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-5363",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-5363",
+        "severity": "Medium",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-5363",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5363",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-2650",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2650",
+        "severity": "Medium",
+        "fix": "3.0.2-0ubuntu1.10",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2650",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libtinfo6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2023-29491",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29491",
+        "severity": "Medium",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29491",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29491",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ncurses-base",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2023-29491",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29491",
+        "severity": "Medium",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/ncurses-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29491",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29491",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ncurses-bin",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2023-29491",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-29491",
+        "severity": "Medium",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/ncurses-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-29491",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-29491",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-5363",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-5363",
+        "severity": "Medium",
+        "fix": "3.0.2-0ubuntu1.12",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-5363",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-5363",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-2650",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-2650",
+        "severity": "Medium",
+        "fix": "3.0.2-0ubuntu1.10",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-2650",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "perl-base",
+        "type": "deb",
+        "version": "5.34.0-3ubuntu1.1",
+        "id": "CVE-2023-47038",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-47038",
+        "severity": "Medium",
+        "fix": "5.34.0-3ubuntu1.3",
+        "locations": [
+          "/usr/share/doc/perl-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": []
+      },
+      {
+        "name": "perl-base",
+        "type": "deb",
+        "version": "5.34.0-3ubuntu1.1",
+        "id": "CVE-2023-31484",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-31484",
+        "severity": "Medium",
+        "fix": "5.34.0-3ubuntu1.2",
+        "locations": [
+          "/usr/share/doc/perl-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-31484",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-31484",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "H",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tar",
+        "type": "deb",
+        "version": "1.34+dfsg-1ubuntu0.1.22.04.1",
+        "id": "CVE-2023-39804",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-39804",
+        "severity": "Medium",
+        "fix": "1.34+dfsg-1ubuntu0.1.22.04.2",
+        "locations": [
+          "/usr/share/doc/tar/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": []
+      }
+    ],
+    "Negligible": [
+      {
+        "name": "libc-bin",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2016-20013",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-20013",
+        "severity": "Negligible",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libc-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2016-20013",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-20013",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libc6",
+        "type": "deb",
+        "version": "2.35-0ubuntu3.1",
+        "id": "CVE-2016-20013",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-20013",
+        "severity": "Negligible",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libc6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2016-20013",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-20013",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libncurses6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2022-29458",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-29458",
+        "severity": "Negligible",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-29458",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libncursesw6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2022-29458",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-29458",
+        "severity": "Negligible",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-29458",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libpcre3",
+        "type": "deb",
+        "version": "2:8.39-13ubuntu0.22.04.1",
+        "id": "CVE-2017-11164",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-11164",
+        "severity": "Negligible",
+        "fix": "not-fixed",
+        "locations": [
+          "/usr/share/doc/libpcre3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2017-11164",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2017-11164",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "C"
+              },
+              {
+                "cvssVersion": "3.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libssl3",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0466",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0466",
+        "severity": "Negligible",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0466",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "libtinfo6",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2022-29458",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-29458",
+        "severity": "Negligible",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/libtinfo6/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-29458",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ncurses-base",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2022-29458",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-29458",
+        "severity": "Negligible",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/ncurses-base/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-29458",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ncurses-bin",
+        "type": "deb",
+        "version": "6.3-2",
+        "id": "CVE-2022-29458",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2022-29458",
+        "severity": "Negligible",
+        "fix": "6.3-2ubuntu0.1",
+        "locations": [
+          "/usr/share/doc/ncurses-bin/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2022-29458",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "severity": "High",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "2.0",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "M",
+                "cvssAvailabilityImpact": "P"
+              },
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "L",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "H"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "openssl",
+        "type": "deb",
+        "version": "3.0.2-0ubuntu1.8",
+        "id": "CVE-2023-0466",
+        "source": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2023-0466",
+        "severity": "Negligible",
+        "fix": "3.0.2-0ubuntu1.9",
+        "locations": [
+          "/usr/share/doc/libssl3/copyright",
+          "/var/lib/dpkg/status"
+        ],
+        "cvssSummaries": [],
+        "relatedVulnerabilities": [
+          {
+            "id": "CVE-2023-0466",
+            "source": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+            "severity": "Medium",
+            "cvssSummaries": [
+              {
+                "cvssVersion": "3.1",
+                "cvssAttackVector": "N",
+                "cvssAttackComplexity": "L",
+                "cvssAvailabilityImpact": "N"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
