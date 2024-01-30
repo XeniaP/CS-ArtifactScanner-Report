@@ -19,10 +19,12 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Run PyInstaller
-        run: |
-          python -m PyInstaller export_report_tmas.spec
-      - uses: actions/upload-artifact@v2
+    - name: Build the .exe with PyInstaller
+      run: |
+        pyinstaller --onefile export_report_tmas.py
+    
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
         with:
           name: Windows
           path: dist/export_report_tmas.exe
