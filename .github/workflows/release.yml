@@ -2,14 +2,12 @@ name: Build Executable
 
 on:
   push:
-    branches:
-      - main  # o cualquier rama en la que desees activar esto
     tags:
       - '*'
 
 jobs:
   build_windows:
-    runs-on: windows-latest  # PyInstaller debe ejecutarse en Windows para generar un .exe
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -23,7 +21,7 @@ jobs:
 
     - name: Build the .exe with PyInstaller
       run: |
-        pyinstaller --onefile export_report_tmas.py
+        pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
 
     - name: Upload Executable
       uses: actions/upload-artifact@v2
@@ -31,11 +29,13 @@ jobs:
         name: export_report_tmas
         path: dist/export_report_tmas.exe  
     
-    - name: Upload Executable
-      uses: actions/upload-artifact@v2
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
       with:
-        name: export_report_tmas_win
-        path: dist/export_report_tmas.exe
+        files: dist/export_report_tmas_win  
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build_linux:
     runs-on: ubuntu-latest
@@ -53,14 +53,12 @@ jobs:
 
     - name: Build Executable
       run: |
-        pyinstaller --onefile export_report_tmas.py
+        pyinstaller --onefile your_script.py  # Reemplaza con el nombre de tu script
 
-    - name: Upload Executable
-      uses: actions/upload-artifact@v2
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
       with:
-        name: export_report_tmas_linux
-        path: dist/export_report_tmas_linux
-
-    
-
-
+        files: dist/export_report_tmas_linux  
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
