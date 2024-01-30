@@ -33,32 +33,3 @@ jobs:
         files: dist/export_report_tmas.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  build_linux:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-
-    - name: Install Dependencies
-      run: |
-        pip install -r requirements.txt 
-
-    - name: Build Executable
-      run: |
-        pyinstaller --onefile your_script.py  # Reemplaza con el nombre de tu script
-    
-    - name: Rename Executable
-      run: |
-        mv dist/export_report_tmas/export_report_tmas_linux
-    - name: Create Release
-      id: create_release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: dist/export_report_tmas_linux
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
