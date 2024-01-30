@@ -22,14 +22,10 @@ jobs:
     - name: Build the .exe with PyInstaller
       run: |
         pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
-    
-    - name: Rename Executable
-      run: |
-        mv dist/export_report_tmas/export_report_tmas.exe
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/export_report_tmas/export_report_tmas.exe
+        files: dist/export_report_tmas.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
