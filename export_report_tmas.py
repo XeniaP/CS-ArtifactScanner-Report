@@ -9,7 +9,7 @@ import datetime
 import subprocess
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 pandas.io.formats.excel.ExcelFormatter.header_style = None
@@ -17,28 +17,34 @@ pandas.io.formats.excel.ExcelFormatter.header_style = None
 contar_nofix = 0
 
 def ExportExcel(df, filename, sheetname):
-    if(os.path.exists(f'{filename}.xlsx')):
-        with ExcelWriter(f'{filename}.xlsx', engine='openpyxl', mode='a', if_sheet_exists="replace") as writer:  
-            df.to_excel(writer, sheetname)
-    else:
-        with ExcelWriter(f'{filename}.xlsx', engine='openpyxl', mode='wb') as writer:
-            df.to_excel(writer, sheetname)
+    try:
+        if(os.path.exists(f'{filename}.xlsx')):
+            with ExcelWriter(f'{filename}.xlsx', engine='openpyxl', mode='a', if_sheet_exists="replace") as writer:  
+                df.to_excel(writer, sheetname)
+        else:
+            with ExcelWriter(f'{filename}.xlsx', engine='openpyxl', mode='wb') as writer:
+                df.to_excel(writer, sheetname)
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
+        sys.exit(1)
 
 def main(): 
     if len(sys.argv) < 4:
         print("Usage: python export_report [imageName] [--registryImage|--resultFile] [registryImageName|resultFileName")
-        print("Command: python export_report myimage --registryImage registry:myimage")
+        #print("Command: python export_report myimage --registryImage repository/myimage:tag")
         print("Command: python export_report myimage --resultFile /to/path/result.json")
         sys.exit(1)
     now = datetime.datetime.now()
     timestamp = now.strftime('%Y_%m_%d')
 
     try:
-        if(sys.argv[2] == "--registryImage"):
-            output = run_command(f"tmas scan registry:{sys.argv[3]} --malwareScan")
-            data = json.loads(output)
-            proces_data(data, sys.argv[1], timestamp)
-        else:
+        #if(sys.argv[2] == "--registryImage"):
+        #    output = run_command(f"tmas scan registry:{sys.argv[3]} --malwareScan")
+        #    if output is None:
+        #        sys.exit(1)
+        #    data = json.loads(output)
+        #    proces_data(data, sys.argv[1], timestamp)
+        #else:
             file_path = os.path.abspath(sys.argv[3])
             if not os.path.exists(file_path):
                 print(f"File not Found: {file_path}")
@@ -50,23 +56,24 @@ def main():
                     
     except FileNotFoundError:
         logger.error(f"The file at {file_path} was not found.")
-        print(f"The file at {file_path} was not found.")
+        sys.exit(1)
     except json.JSONDecodeError:
         logger.error("Failed to decode JSON from the file.")
-        print(f"The file at {file_path} was not found.")
+        sys.exit(1)
     except Exception as e:
         logger.error(f"An unexpected error occurred: {e}")
-        print(f"The file at {file_path} was not found.")
+        sys.exit(1)
 
 def run_command(command):
     try:
         result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if result.stderr:
-            print(result.stderr)
+            logger.error(f"Error executing command: {result.stderr}")
+            return None
         return result.stdout
     except Exception as e:
-        print(f"Error : {result.stderr}")
-        pass
+        logger.error(f"Exception during command execution: {e}")
+        return None
 
 
 def proces_data(data, image_name, timestamp):
@@ -108,11 +115,10 @@ def proces_data(data, image_name, timestamp):
         
         print(f"Report generated successfully: TM_Artifact_Scanner_Report_{image_name}_{timestamp}.xlsx")
     except PermissionError:
-        print("Error: You do not have permission to write the file.")
+        logger.error("Error: You do not have permission to write the file.")
     except FileNotFoundError:
-        print("Error: The specified directory was not found.")
+        logger.error("Error: The specified directory was not found.")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
         logger.error(f"An unexpected error occurred: {e}")
 
 def sum_count_fix(value):
