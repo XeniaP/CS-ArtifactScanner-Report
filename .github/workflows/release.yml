@@ -30,6 +30,6 @@ jobs:
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/export_report_tmas.exe
+        files: dist/export_report_tmas/export_report_tmas.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
