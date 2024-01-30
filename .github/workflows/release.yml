@@ -19,12 +19,12 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Build the .exe with PyInstaller
-      run: |
-        pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
-    - uses: actions/upload-artifact@v2
+    - name: Run PyInstaller
+        run: |
+          python -m PyInstaller export_report_tmas.spec
+      - uses: actions/upload-artifact@v2
         with:
-          name: Windows_qwiklabs
+          name: Windows
           path: dist/export_report_tmas.exe
     
     - name: create release
