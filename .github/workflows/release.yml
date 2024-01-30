@@ -22,18 +22,15 @@ jobs:
     - name: Build the .exe with PyInstaller
       run: |
         pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
-
-    - name: Upload Executable
-      uses: actions/upload-artifact@v2
-      with:
-        name: export_report_tmas
-        path: dist/export_report_tmas.exe  
     
+    - name: Rename Executable
+      run: |
+        mv dist/export_report_tmas/export_report_tmas.exe
+
     - name: Create Release
-      id: create_release
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/export_report_tmas_win  
+        files: dist/export_report_tmas.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -54,11 +51,14 @@ jobs:
     - name: Build Executable
       run: |
         pyinstaller --onefile your_script.py  # Reemplaza con el nombre de tu script
-
+    
+    - name: Rename Executable
+      run: |
+        mv dist/export_report_tmas/export_report_tmas_linux
     - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/export_report_tmas_linux  
+        files: dist/export_report_tmas_linux
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
