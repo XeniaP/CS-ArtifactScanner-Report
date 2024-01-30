@@ -1,3 +1,9 @@
 pandas
 requests
 xlsxwriter
+json
+tarfile
+os
+datetime
+subprocess
+logging
