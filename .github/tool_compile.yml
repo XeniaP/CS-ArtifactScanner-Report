@@ -1,0 +1,31 @@
+name: Build Executable
+
+on:
+  push:
+    branches:
+      - main  # o cualquier rama en la que desees activar esto
+
+jobs:
+  build_exe:
+    runs-on: windows-latest  # PyInstaller debe ejecutarse en Windows para generar un .exe
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Especifica la versión de Python
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Build the .exe with PyInstaller
+      run: |
+        pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
+
+    - name: Upload Executable
+      uses: actions/upload-artifact@v2
+      with:
+        name: export_report_tmas
+        path: dist/export_report_tmas.exe  # El .exe se encuentra en la carpeta dist
+
