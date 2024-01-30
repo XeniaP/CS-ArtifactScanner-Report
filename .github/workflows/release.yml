@@ -22,7 +22,6 @@ jobs:
     - name: Build the .exe with PyInstaller
       run: |
         pyinstaller --onefile export_report_tmas.py  # Reemplaza con el nombre de tu script
-
     - uses: actions/upload-artifact@v2
         with:
           name: Windows_qwiklabs
