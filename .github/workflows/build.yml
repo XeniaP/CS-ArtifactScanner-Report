@@ -2,8 +2,8 @@ name: Build Executable
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
 
 jobs:
   build_windows:
@@ -23,9 +23,9 @@ jobs:
       run: |
         pyinstaller --onefile export_report_tmas.py
 
-    - name: Set up Git
+    - name: list directory
       run: |
-        ls
+        ls -la
     
     - name: create release
       id: create_release
