@@ -14,29 +14,25 @@ permissions:
 
 jobs:
   Build:
-    name: Build release binaries
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os:
-          #- macos-latest
-          #- ubuntu-latest
-          - windows-latest
+        os: ['windows-latest', 'ubuntu-latest, 'macos-latest']
 
-    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
       with:
-        python-version: '3.7' 
-        architecture: 'x64'
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-    - name: Build the .exe with PyInstaller
-      run: |
-        pyinstaller --onefile export_report_tmas.py
+        python-version: 3.7
+
+    - run: pip install -r requirements.txt pyinstaller
+    - run: pyinstaller your-code.py
+    # Optionally verify that it works (provided that it does not need user interaction)
+    - run: ./dist/your-code/your-code
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dist/*
 
     - name: Deploy artifacts
       uses: actions/upload-artifact@v2
