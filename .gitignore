@@ -6,4 +6,4 @@ THIRD-PARTY-LICENSES/*
 *.tar
 *.env
 *.json
-*.txt
+test.txt
