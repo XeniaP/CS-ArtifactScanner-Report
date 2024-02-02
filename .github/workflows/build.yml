@@ -5,9 +5,23 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    shell: bash
+    working-directory: app
+
 jobs:
-  build_windows:
-    runs-on: windows-2019
+  Build:
+    name: Build release binaries
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
+
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -19,35 +33,12 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Build the .exe with PyInstaller
-      run: |
-        pyinstaller --onefile export_report_tmas.py
+    - name: Build with pyinstaller
+        run: pyinstaller --onefile --name=app-${{ matrix.os }} main.py
 
-    - name: list directory
-      run: |
-        dir
-    
-    - name: create release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy artifacts
+      uses: actions/upload-artifact@v2
       with:
-        tag_name: ${{ github.event.head_commit.message }}
-        release_name: ${{ github.event.head_commit.message }}
-        overwrite: true
-        body: |
-          Test Release v1.0.0
-        draft: false
-        prerelease: false
-    
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{steps.create_release.outputs.upload_url}}
-        asset_path: dist/export_report_tmas.exe
-        asset_name: export_report_tmas.exe
-        asset_content_type: application/zip
+        name: app-${{ matrix.os }}
+        path: app/dist/app-${{ matrix.os }}*
+        if-no-files-found: error
