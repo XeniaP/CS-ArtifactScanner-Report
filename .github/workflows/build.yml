@@ -1,73 +1,53 @@
-name: Build Executable
+name: Build and Publish Executable
 
 on:
   push:
     branches:
       - main
-
-defaults:
-  run:
-    shell: bash
-
-permissions:
-  contents: write
+  release:
+    types: [created]
 
 jobs:
-  Build:
-    name: Build release binaries
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          #- macos-latest
-          #- ubuntu-latest
-          - windows-latest
-
-    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.7' 
-        architecture: 'x64'
+        python-version: '3.8'
+        
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
-    - name: Build the .exe with PyInstaller
-      run: |
-        pyinstaller --onefile export_report_tmas.py
-
-    - name: Deploy artifacts
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+        
+    - name: Build executable
+      run: pyinstaller --onefile export_report_tmas.py
+      
+    - name: Upload Executable as Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: app-${{ matrix.os }}
-        path: export_report_tmas.exe
-        if-no-files-found: error
-    - name: Build project # This would actually build your project, using zip for an example artifact
-      run: |
-        zip --junk-paths export_report_tmas README.md
-    - uses: actions/upload-artifact@v4
+        name: export_report_tmas
+        path: dist/export_report_tmas
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'created'
+    
+    steps:
+    - name: Download Executable
+      uses: actions/download-artifact@v2
       with:
         name: export_report_tmas
-        path: export_report_tmas.exe
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
+        
+    - name: Publish to GitHub Releases
+      uses: softprops/action-gh-release@v1
+      with:
+        files: export_report_tmas/*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-    - name: Upload Release Asset
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: ./export_report_tmas.zip
-        asset_name: export_report_tmas.zip
-        asset_content_type: application/zip
