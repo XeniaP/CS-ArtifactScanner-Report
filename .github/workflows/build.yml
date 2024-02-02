@@ -17,9 +17,9 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - macos-latest
+          #- macos-latest
           - ubuntu-latest
-          - windows-latest
+          #- windows-latest
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -31,12 +31,10 @@ jobs:
         architecture: 'x64'
     - name: Install dependencies
       run: |
-        dir
+        ls -la
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
-
     - name: Build with pyinstaller
       run: |
         pyinstaller --onefile --name=app-${{ matrix.os }} main.py
