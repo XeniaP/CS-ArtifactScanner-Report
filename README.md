@@ -46,7 +46,3 @@ Para usar `export_report_tmas.exe`, sigue estos pasos:
 ## Salida
 
 Al ejecutar el comando, se generará un informe basado en los datos del archivo JSON proporcionado. El informe se guardará en el mismo directorio donde se ejecuta el comando, a menos que se especifique una ruta diferente.
-
-## Soporte
-
-Si encuentras problemas o tienes preguntas sobre el uso de `export_report_tmas.exe`, por favor, contacta al equipo de soporte en [correo@soporte.com](mailto:correo@soporte.com).
