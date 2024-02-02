@@ -28,37 +28,41 @@ def ExportExcel(df, filename, sheetname):
         logger.error(f"An unexpected error occurred: {e}")
         sys.exit(1)
 
+import json
+
+def cargar_json_con_validacion(file_path):
+    if not os.path.getsize(file_path) > 0:
+        raise ValueError("The file is Empty")
+
+    codificaciones = ['utf-8', 'utf-16', 'latin1', 'ISO-8859-1', 'CP-1252']
+    for codificacion in codificaciones:
+        try:
+            with open(file_path, 'r', encoding=codificacion) as file:
+                print(type(json.load(file)))
+                return json.load(file), codificacion
+        except Exception as e:
+            print(f"Loop decode types {codificacion}: {e}")
+    raise ValueError("Could not load file with tested encodings.")
+
 def main(): 
     if len(sys.argv) < 4:
-        print("Usage: python export_report [imageName] [--registryImage|--resultFile] [registryImageName|resultFileName")
-        #print("Command: python export_report myimage --registryImage repository/myimage:tag")
-        print("Command: python export_report myimage --resultFile /to/path/result.json")
         sys.exit(1)
     now = datetime.datetime.now()
     timestamp = now.strftime('%Y_%m_%d')
 
     try:
-        #if(sys.argv[2] == "--registryImage"):
-        #    output = run_command(f"tmas scan registry:{sys.argv[3]} --malwareScan")
-        #    if output is None:
-        #        sys.exit(1)
-        #    data = json.loads(output)
-        #    proces_data(data, sys.argv[1], timestamp)
-        #else:
-            file_path = os.path.abspath(sys.argv[3])
-            if not os.path.exists(file_path):
-                print(f"File not Found: {file_path}")
-            if(sys.argv[2] == "--resultFile"):
-                with open(file_path, 'r') as file:
-                    content = file.read()
-                    data = json.loads(content)
-                    proces_data(data, sys.argv[1], timestamp)
-                    
+        file_path = os.path.abspath(sys.argv[3])
+        if not os.path.exists(file_path):
+            print(f"File not Found: {file_path}")
+        if(sys.argv[2] == "--resultFile"):
+            try:
+                data, codificacion_usada = cargar_json_con_validacion(file_path)
+                logger.info(f"File loaded Successfully with encode: {codificacion_usada}")
+                proces_data(data, sys.argv[1], timestamp)
+            except ValueError as e:
+                logger.error(f"An unexpected error occurred: {e}")
     except FileNotFoundError:
         logger.error(f"The file at {file_path} was not found.")
-        sys.exit(1)
-    except json.JSONDecodeError:
-        logger.error("Failed to decode JSON from the file.")
         sys.exit(1)
     except Exception as e:
         logger.error(f"An unexpected error occurred: {e}")
@@ -78,7 +82,6 @@ def run_command(command):
 
 def proces_data(data, image_name, timestamp):
     malware_sumary= ""
-
     if isMalwareScan(data) == True:
         value = data["vulnerability"]
         malware_sumary = {
@@ -86,7 +89,7 @@ def proces_data(data, image_name, timestamp):
         }
     else:
         value = data
-        
+
     vulnerability_sumary = {
         "Total Vulnerabilities": value["totalVulnCount"],
         "Critial": value["criticalCount"],
@@ -96,6 +99,7 @@ def proces_data(data, image_name, timestamp):
         "Negligible": value["negligibleCount"],
         "Unknown": value["unknownCount"]
     }
+    print(value["totalVulnCount"])
 
     try:
         with pd.ExcelWriter(f"TM_Artifact_Scanner_Report_{image_name}_{timestamp}.xlsx", engine="xlsxwriter") as writer:
@@ -113,7 +117,7 @@ def proces_data(data, image_name, timestamp):
             addGraph(workbook, worksheet_resumen, 'Summary')
             addStyle(workbook, worksheet_resumen)
         
-        print(f"Report generated successfully: TM_Artifact_Scanner_Report_{image_name}_{timestamp}.xlsx")
+        logging.info(f"Report generated successfully: TM_Artifact_Scanner_Report_{image_name}_{timestamp}.xlsx")
     except PermissionError:
         logger.error("Error: You do not have permission to write the file.")
     except FileNotFoundError:
@@ -174,7 +178,7 @@ def addGraph(workbook, worksheet, sheet_name):
     worksheet.insert_chart('J20', vulnerability_fix_chart)
 
 def isMalwareScan(json):
-    if "vulnerability" and "malware" in json:
+    if "vulnerability" in json and "malware" in json:
         return True
     return False
 
