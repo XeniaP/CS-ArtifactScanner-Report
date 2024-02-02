@@ -34,7 +34,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Build with pyinstaller
-        run: pyinstaller --onefile --name=app-${{ matrix.os }} main.py
+      run: |
+        pyinstaller --onefile --name=app-${{ matrix.os }} main.py
 
     - name: Deploy artifacts
       uses: actions/upload-artifact@v2
