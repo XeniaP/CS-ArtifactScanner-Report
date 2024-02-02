@@ -8,6 +8,7 @@ import pandas.io.formats.excel
 import datetime
 import subprocess
 import logging
+import chardet
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -34,15 +35,26 @@ def cargar_json_con_validacion(file_path):
     if not os.path.getsize(file_path) > 0:
         raise ValueError("The file is Empty")
 
-    codificaciones = ['utf-8', 'utf-16', 'latin1', 'ISO-8859-1', 'CP-1252']
-    for codificacion in codificaciones:
-        try:
-            with open(file_path, 'r', encoding=codificacion) as file:
-                print(type(json.load(file)))
-                return json.load(file), codificacion
-        except Exception as e:
-            print(f"Loop decode types {codificacion}: {e}")
-    raise ValueError("Could not load file with tested encodings.")
+    #Solution 1
+    #codificaciones = ['utf-8', 'utf-16', 'latin1', 'ISO-8859-1', 'CP-1252']
+    #for codificacion in codificaciones:
+    #    try:
+    #        with open(file_path, 'r', encoding=codificacion) as file:
+    #            print(type(json.load(file)))
+    #            return json.load(file), codificacion
+    #    except Exception as e:
+    #        print(f"Loop decode types {codificacion}: {e}")
+    #raise ValueError("Could not load file with tested encodings.")
+
+    #Solution 2
+    with open(file_path, 'rb') as file:
+        result = chardet.detect(file.read())
+        codification = result['encoding']
+        print(f"File encode: {codification}")
+
+        with open(file_path, 'r', encoding=codification) as file:
+            return json.load(file), codification
+
 
 def main(): 
     if len(sys.argv) < 4:
