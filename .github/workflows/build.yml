@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: app-${{ matrix.os }}
-        path: export_report_tmas-${{ matrix.os }}.exe
+        path: export_report_tmas.exe
         if-no-files-found: error
     - name: Build project # This would actually build your project, using zip for an example artifact
       run: |
