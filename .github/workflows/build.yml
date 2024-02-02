@@ -35,7 +35,7 @@ jobs:
       run: |
         pip install -r requirements.txt
     - name: Create Executable
-        uses: sayyid5416/pyinstaller@v1
+        uses: sayyid5416/pyinstaller-action@v1
         with:
           python_ver: '3.7'
           spec: 'src/build.spec'
