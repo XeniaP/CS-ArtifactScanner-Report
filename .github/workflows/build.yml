@@ -34,30 +34,23 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-    - name: Create Executable
-        uses: actions/pyinstaller-action@v1
-        with:
-          python_ver: '3.7'
-          spec: 'src/build.spec'
-          requirements: 'src/requirements.txt'
-          upload_exe_with_name: 'export_report_tmas.exe'
-          options: --onefile, --name "export_report_tmas", --windowed, 
+    - name: Build the .exe with PyInstaller
+      run: |
+        pyinstaller --onefile export_report_tmas.py
 
     - name: Deploy artifacts
       uses: actions/upload-artifact@v2
       with:
         name: app-${{ matrix.os }}
-        path: app-${{ matrix.os }}*
+        path: export_report_tmas-${{ matrix.os }}.exe
         if-no-files-found: error
     - name: Build project # This would actually build your project, using zip for an example artifact
       run: |
-        zip --junk-paths my-artifact README.md
-    - run: mkdir -p path/to/artifact
-    - run: echo hello > path/to/artifact/world.txt
+        zip --junk-paths export_report_tmas README.md
     - uses: actions/upload-artifact@v4
       with:
-        name: my-artifact
-        path: path/to/artifact/world.txt
+        name: export_report_tmas
+        path: export_report_tmas.exe
     - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -75,6 +68,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: ./my-artifact.zip
-        asset_name: my-artifact.zip
+        asset_path: ./export_report_tmas.zip
+        asset_name: export_report_tmas.zip
         asset_content_type: application/zip
