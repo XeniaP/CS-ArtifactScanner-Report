@@ -14,11 +14,15 @@ permissions:
 
 jobs:
   Build:
+    name: Build release binaries
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: ['windows-latest', 'ubuntu-latest, 'macos-latest']
+        os: 
+          - 'windows-latest'
+          - 'ubuntu-latest
+          - 'macos-latest'
 
     steps:
     - uses: actions/checkout@v2
@@ -33,7 +37,6 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*
-
     - name: Deploy artifacts
       uses: actions/upload-artifact@v2
       with:
