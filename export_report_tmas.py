@@ -81,9 +81,14 @@ def run_command(command):
 
 
 def proces_data(data, image_name, timestamp):
+    print(f"Processing data for image: {image_name} at {timestamp}")
     malware_sumary= ""
+    secrets_summary = {}
+    if "secrets" in data:
+        secrets_summary = {'Total Secrets Found': data["secrets"]["unmitigatedFindingsCount"]}
+
     if isMalwareScan(data) == True:
-        value = data["vulnerability"]
+        value = data["vulnerabilities"]
         malware_sumary = {
             'Total Malware Found': data["malware"]["scanResult"],
         }
@@ -132,6 +137,13 @@ def proces_data(data, image_name, timestamp):
             
             addGraph(workbook, worksheet_resumen, 'Summary',year_counts)
             addStyle(workbook, worksheet_resumen)
+            
+            if secrets_summary:
+                pd.DataFrame([secrets_summary]).to_excel(writer, sheet_name="Summary", startrow=16, startcol=1, index=False)
+                df_secret_details = pd.json_normalize(extract_secret_details(data['secrets']['findings']))
+                df_secret_details.to_excel(writer, sheet_name="Secrets Details", index=False)
+                addStyle(workbook, writer.sheets['Secrets Details'])
+
             worksheet_statistics.hide()
         
         logging.info(f"Report generated successfully: TM_Artifact_Scanner_Report_{image_name}_{timestamp}.xlsx")
@@ -166,16 +178,21 @@ def addStyle(workbook, worksheet):
     value_format = workbook.add_format({'bold': True,'text_wrap': True,'valign': 'center','bg_color': '#FABF8F'})
     nonvalue_format = workbook.add_format({'bold': True,'text_wrap': True,'valign': 'center','bg_color': '#CDCDCD'})
     if (worksheet.name == 'Summary'):
-        worksheet.conditional_format('B3:H3', {'type': 'no_blanks','format': header_format, 'multi_range': 'B3:H3 B8:H8 B14:H14'})
-        worksheet.conditional_format('B4:H4', {'type': 'cell','criteria': 'greater than','value': 0,'format': value_format, 'multi_range': 'B4:H4 B9:D9 B15'})
-        worksheet.conditional_format('B4:H4', {'type': 'cell','criteria': 'greater than','value': 0,'format': nonvalue_format, 'multi_range': 'B4:H4 B9:D9 B15'})
+        worksheet.conditional_format('B3:H3', {'type': 'no_blanks','format': header_format, 'multi_range': 'B3:H3 B8:H8 B14:H14 B17:H17'})
+        worksheet.conditional_format('B4:H4', {'type': 'cell','criteria': 'greater than','value': 0,'format': value_format, 'multi_range': 'B4:H4 B9:D9 B15 B18'})
+        worksheet.conditional_format('B4:H4', {'type': 'cell','criteria': 'greater than','value': 0,'format': nonvalue_format, 'multi_range': 'B4:H4 B9:D9 B15 B18'})
     elif(worksheet.name == 'Malware Details'):
         worksheet.conditional_format('A1:O1', {'type': 'no_blanks','format': header_format})
         header_format.set_align('vcenter')
         worksheet.set_column('A:A', 75)
         worksheet.set_column('D:D', 75)
+    elif(worksheet.name == 'Secrets Details'):
+        worksheet.conditional_format('A1:D1', {'type': 'no_blanks','format': header_format})
+        worksheet.set_column('A:D', 30)
     else:
         worksheet.conditional_format('A1:O1', {'type': 'no_blanks','format': header_format})
+    
+
     worksheet.set_column('A:B', 20)
     worksheet.set_column('C:H', 10)
 
@@ -218,12 +235,12 @@ def addGraph(workbook, worksheet, sheet_name, year_counts):
     vulnerability_details_chart = create_doughnut_chart('Vulnerability Severities',f'={sheet_name}!$C$3:$H$3',f'={sheet_name}!$C$4:$H$4',colors,workbook)
     vulnerability_fix_chart = create_doughnut_chart('Fix Distribution',f'={sheet_name}!$C$8:$D$8',f'={sheet_name}!$C$9:$D$9',fix_colors,workbook)
     cve_year_chart = create_bar_chart('CVEs by Year',f'={sheet_name}!$C$14:$H$14',year_counts,workbook, year_counts)
-    worksheet.insert_chart('B18', vulnerability_details_chart)
-    worksheet.insert_chart('H18', vulnerability_fix_chart)
-    worksheet.insert_chart('P18', cve_year_chart)
+    worksheet.insert_chart('B22', vulnerability_details_chart)
+    worksheet.insert_chart('H22', vulnerability_fix_chart)
+    worksheet.insert_chart('P22', cve_year_chart)
 
 def isMalwareScan(json):
-    if "vulnerability" in json and "malware" in json:
+    if "vulnerabilities" in json and "malware" in json:
         return True
     return False
 
@@ -291,6 +308,18 @@ def extract_cvss_details(related_vulnerability):
             }
             break
     return cvss_details
+
+
+def extract_secret_details(secrets):
+    secret_details = []
+    for secret in secrets["unmitigated"]:
+        secret_details.append({
+            "Rule": secret["ruleID"],
+            "Secret": secret["secret"],
+            "Layer Digest": secret["location"]["layerID"],
+            "Path": secret["location"]["path"]
+        })
+    return secret_details
 
 if __name__ == '__main__':
     main()
